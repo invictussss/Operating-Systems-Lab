@@ -1,0 +1,29 @@
+DINING PHILOSOPHERS PROBLEM
+
+Philosopher 1 is thinking.
+Philosopher 2 is thinking.
+Philosopher 3 is thinking.
+Philosopher 4 is thinking.
+Philosopher 5 is thinking.
+Philosopher 1 picked up left fork.
+Philosopher 1 picked up right fork.
+Philosopher 1 is eating.
+Philosopher 3 picked up left fork.
+Philosopher 3 picked up right fork.
+Philosopher 3 is eating.
+Philosopher 5 picked up left fork.
+Philosopher 1 finished eating and put down forks.
+Philosopher 2 picked up left fork.
+Philosopher 5 picked up right fork.
+Philosopher 5 is eating.
+Philosopher 3 finished eating and put down forks.
+Philosopher 2 picked up right fork.
+Philosopher 2 is eating.
+Philosopher 4 picked up left fork.
+Philosopher 5 finished eating and put down forks.
+Philosopher 4 picked up right fork.
+Philosopher 4 is eating.
+Philosopher 2 finished eating and put down forks.
+Philosopher 4 finished eating and put down forks.
+
+Dining Philosophers execution completed.

@@ -1,0 +1,16 @@
+
+--- Controlled Deadlock Scenario ---
+Thread 2: Holding Resource B
+Thread 1: Holding Resource A
+Thread 1: Waiting for second resource
+Thread 2: Waiting for second resource
+Thread 1: Timeout! Releasing held resource.
+Thread 2: Acquired second resource
+
+--- Deadlock Prevention: Resource Ordering ---
+Thread 1: Following resource order A -> B
+Thread 1: Both resources acquired safely
+Thread 2: Following resource order A -> B
+Thread 2: Both resources acquired safely
+
+Program completed successfully.

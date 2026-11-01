@@ -1,0 +1,9 @@
+Script started on 2026-10-04 15:35:35+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="170" LINES="43"]
+[?2004h]0;vikash@VIKASH-KUMAR: ~/Operating-Systems-Lab[01;32mvikash@VIKASH-KUMAR[00m:[01;34m~/Operating-Systems-Lab[00m$ [7mcd ~/Operating-Systems-Lab/Lab1[27m
+[7mls[27m[A]0;vikash@VIKASH-KUMAR: ~/Operating-Systems-Lab[01;32mvikash@VIKASH-KUMAR[00m:[01;34m~/Operating-Systems-Lab[00m$ cd ~/Operating-Systems-Lab/Lab1
+ls
+[?2004l[0m[01;34mQ1_System_Calls[0m  [01;34mQ2_FCFS_SJF[0m  [01;34mQ3_Priority_Round_Robin[0m  [01;34mQ4_Metrics_Threads_IPC[0m
+[?2004h]0;vikash@VIKASH-KUMAR: ~/Operating-Systems-Lab/Lab1[01;32mvikash@VIKASH-KUMAR[00m:[01;34m~/Operating-Systems-Lab/Lab1[00m$ [7mexit[27mexit
+[?2004lexit
+
+Script done on 2026-10-04 15:36:37+00:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,21 @@
+THREAD CREATION AND PERFORMANCE
+Total Numbers: 500000
+
+--- Single Thread Execution ---
+Thread Name: MainThread
+Thread ID: 132896596132288
+Process ID: 2400
+Result: 41666791666750000
+
+--- Multiple Thread Execution ---
+Worker-1 started | ID: 132896566150848
+Worker-1 completed
+Worker-2 started | ID: 132896557758144
+Worker-2 completed
+Combined Result: 41666791666750000
+
+--- Performance Comparison ---
+Single Thread Time: 0.011746 seconds
+Multiple Thread Time: 0.012098 seconds
+
+Both executions completed successfully.

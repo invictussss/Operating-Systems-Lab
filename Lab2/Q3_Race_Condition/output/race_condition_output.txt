@@ -1,0 +1,11 @@
+RACE CONDITION USING MUTEX
+Threads: 2
+Increments per thread: 1000000
+
+--- Without Mutex ---
+Expected Counter: 2000000
+Actual Counter: 1015589
+
+--- With Mutex ---
+Expected Counter: 2000000
+Actual Counter: 2000000
