@@ -1,0 +1,41 @@
+==================================================
+       PAGING AND SEGMENTATION SIMULATION
+==================================================
+
+========== PAGING ==========
+Enter page size: Enter number of page table entries: 
+Enter frame number for each page.
+Enter -1 for an unmapped page.
+Page 0 frame number: Page 1 frame number: Page 2 frame number: Page 3 frame number: 
+Enter logical address: 
+----- PAGING CALCULATIONS -----
+Logical Address: 250
+Page Size: 100
+Page Number = 250 // 100 = 2
+Offset = 250 % 100 = 50
+Page Table Entry: Valid
+Frame Number: 12
+Physical Address = Frame Number * Page Size + Offset
+Physical Address = 12 * 100 + 50
+Physical Address: 1250
+
+========== SEGMENTATION ==========
+Enter number of segments: 
+Segment 0:
+Enter base address: Enter segment limit: 
+Segment 1:
+Enter base address: Enter segment limit: 
+Segment 2:
+Enter base address: Enter segment limit: 
+Enter segment number: Enter offset: 
+----- SEGMENTATION CALCULATIONS -----
+Segment Number: 1
+Offset: 120
+Base Address: 2000
+Segment Limit: 500
+Segment Reference: Valid
+Physical Address = Base Address + Offset
+Physical Address = 2000 + 120
+Physical Address: 2120
+
+SIMULATION COMPLETED.

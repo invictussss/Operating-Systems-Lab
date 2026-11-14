@@ -1,0 +1,49 @@
+============================================================
+ CONTIGUOUS ALLOCATION, SWAPPING AND ADDRESS TRANSLATION
+============================================================
+
+========== CONTIGUOUS MEMORY ALLOCATION ==========
+Enter number of memory blocks: Enter block sizes: Enter number of processes: Enter process sizes: 
+----- FIRST FIT ALLOCATION -----
+Process P1 (212 KB) allocated to Block 2
+Process P2 (417 KB) allocated to Block 5
+Process P3 (112 KB) allocated to Block 2
+Process P4 (426 KB) could not be allocated
+Remaining Memory Blocks: [100, 176, 200, 300, 183]
+
+----- BEST FIT ALLOCATION -----
+Process P1 (212 KB) allocated to Block 4
+Process P2 (417 KB) allocated to Block 2
+Process P3 (112 KB) allocated to Block 3
+Process P4 (426 KB) allocated to Block 5
+Remaining Memory Blocks: [100, 83, 88, 88, 174]
+
+----- WORST FIT ALLOCATION -----
+Process P1 (212 KB) allocated to Block 5
+Process P2 (417 KB) allocated to Block 2
+Process P3 (112 KB) allocated to Block 5
+Process P4 (426 KB) could not be allocated
+Remaining Memory Blocks: [100, 83, 200, 300, 276]
+
+========== SWAPPING SIMULATION ==========
+Enter total memory size (KB): Enter process size (KB): 
+Process loaded into main memory.
+Memory Used: 400 KB
+Free Memory: 600 KB
+
+Swapping process out to secondary storage...
+Process moved to secondary storage successfully.
+
+Swapping process back into main memory...
+Process restored successfully.
+
+========== ADDRESS TRANSLATION ==========
+Enter base address: Enter segment limit: Enter logical address (offset): 
+Base Address: 1000
+Segment Limit: 500
+Logical Address: 250
+Physical Address = Base Address + Logical Address
+Physical Address = 1000 + 250
+Physical Address: 1250
+
+CONTIGUOUS ALLOCATION SIMULATION COMPLETED SUCCESSFULLY.

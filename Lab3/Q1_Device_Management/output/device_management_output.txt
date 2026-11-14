@@ -1,0 +1,231 @@
+=======================================================
+       DEVICE MANAGEMENT SIMULATION
+=======================================================
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Available | Owner: None
+Scanner | Type: Input | Status: Available | Owner: None
+Disk | Type: Storage | Status: Available | Owner: None
+Shared Request Queue: []
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+P1 requests Printer
+Printer allocated to P1.
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Assigned | Owner: P1
+Scanner | Type: Input | Status: Available | Owner: None
+Disk | Type: Storage | Status: Available | Owner: None
+Shared Request Queue: []
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+P2 requests Printer
+Request REJECTED. Printer is already assigned to P1.
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Assigned | Owner: P1
+Scanner | Type: Input | Status: Available | Owner: None
+Disk | Type: Storage | Status: Available | Owner: None
+Shared Request Queue: []
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+P3 requests Scanner
+Scanner allocated to P3.
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Assigned | Owner: P1
+Scanner | Type: Input | Status: Assigned | Owner: P3
+Disk | Type: Storage | Status: Available | Owner: None
+Shared Request Queue: []
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+P1 requests Disk
+Request added to shared-device FIFO queue.
+Shared device Disk assigned to P1.
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Assigned | Owner: P1
+Scanner | Type: Input | Status: Assigned | Owner: P3
+Disk | Type: Storage | Status: Assigned | Owner: P1
+Shared Request Queue: []
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+P2 requests Disk
+Request added to shared-device FIFO queue.
+P2 is waiting for Disk.
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Assigned | Owner: P1
+Scanner | Type: Input | Status: Assigned | Owner: P3
+Disk | Type: Storage | Status: Assigned | Owner: P1
+Shared Request Queue: [('P2', 'Disk')]
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+P3 requests Disk
+Request added to shared-device FIFO queue.
+P2 is waiting for Disk.
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Assigned | Owner: P1
+Scanner | Type: Input | Status: Assigned | Owner: P3
+Disk | Type: Storage | Status: Assigned | Owner: P1
+Shared Request Queue: [('P2', 'Disk'), ('P3', 'Disk')]
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+----- VIRTUAL DEVICE SIMULATION -----
+Virtual Printer acts as a software abstraction.
+Multiple processes can submit print requests
+without directly controlling the physical printer.
+The operating system manages these requests
+through a common interface and device queue.
+------------------------------------
+
+----- FINITE BUFFER DEMONSTRATION -----
+Inserted into buffer: Data-1
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Assigned | Owner: P1
+Scanner | Type: Input | Status: Assigned | Owner: P3
+Disk | Type: Storage | Status: Assigned | Owner: P1
+Shared Request Queue: [('P2', 'Disk'), ('P3', 'Disk')]
+Buffer: ['Data-1']
+Buffer usage: 1/3
+--------------------------------
+Inserted into buffer: Data-2
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Assigned | Owner: P1
+Scanner | Type: Input | Status: Assigned | Owner: P3
+Disk | Type: Storage | Status: Assigned | Owner: P1
+Shared Request Queue: [('P2', 'Disk'), ('P3', 'Disk')]
+Buffer: ['Data-1', 'Data-2']
+Buffer usage: 2/3
+--------------------------------
+Inserted into buffer: Data-3
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Assigned | Owner: P1
+Scanner | Type: Input | Status: Assigned | Owner: P3
+Disk | Type: Storage | Status: Assigned | Owner: P1
+Shared Request Queue: [('P2', 'Disk'), ('P3', 'Disk')]
+Buffer: ['Data-1', 'Data-2', 'Data-3']
+Buffer usage: 3/3
+--------------------------------
+Buffer is FULL. Cannot insert: Data-4
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Assigned | Owner: P1
+Scanner | Type: Input | Status: Assigned | Owner: P3
+Disk | Type: Storage | Status: Assigned | Owner: P1
+Shared Request Queue: [('P2', 'Disk'), ('P3', 'Disk')]
+Buffer: ['Data-1', 'Data-2', 'Data-3']
+Buffer usage: 3/3
+--------------------------------
+Removed from buffer: Data-1
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Assigned | Owner: P1
+Scanner | Type: Input | Status: Assigned | Owner: P3
+Disk | Type: Storage | Status: Assigned | Owner: P1
+Shared Request Queue: [('P2', 'Disk'), ('P3', 'Disk')]
+Buffer: ['Data-2', 'Data-3']
+Buffer usage: 2/3
+--------------------------------
+Removed from buffer: Data-2
+Removed from buffer: Data-3
+Buffer is EMPTY. Nothing to remove.
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Assigned | Owner: P1
+Scanner | Type: Input | Status: Assigned | Owner: P3
+Disk | Type: Storage | Status: Assigned | Owner: P1
+Shared Request Queue: [('P2', 'Disk'), ('P3', 'Disk')]
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+P1 completes request for Printer
+Printer released successfully.
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Available | Owner: None
+Scanner | Type: Input | Status: Assigned | Owner: P3
+Disk | Type: Storage | Status: Assigned | Owner: P1
+Shared Request Queue: [('P2', 'Disk'), ('P3', 'Disk')]
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+P3 completes request for Scanner
+Scanner released successfully.
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Available | Owner: None
+Scanner | Type: Input | Status: Available | Owner: None
+Disk | Type: Storage | Status: Assigned | Owner: P1
+Shared Request Queue: [('P2', 'Disk'), ('P3', 'Disk')]
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+P1 completes request for Disk
+Disk released successfully.
+Shared device Disk assigned to P2.
+P3 is waiting for Disk.
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Available | Owner: None
+Scanner | Type: Input | Status: Available | Owner: None
+Disk | Type: Storage | Status: Assigned | Owner: P2
+Shared Request Queue: [('P3', 'Disk')]
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+P2 completes request for Disk
+Disk released successfully.
+Shared device Disk assigned to P3.
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Available | Owner: None
+Scanner | Type: Input | Status: Available | Owner: None
+Disk | Type: Storage | Status: Assigned | Owner: P3
+Shared Request Queue: []
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+P3 completes request for Disk
+Disk released successfully.
+
+----- CURRENT DEVICE STATE -----
+Printer | Type: Output | Status: Available | Owner: None
+Scanner | Type: Input | Status: Available | Owner: None
+Disk | Type: Storage | Status: Available | Owner: None
+Shared Request Queue: []
+Buffer: []
+Buffer usage: 0/3
+--------------------------------
+
+----- CPU AND DEVICE INDEPENDENCE -----
+The CPU can execute other processes while an I/O
+device performs its assigned operation.
+After I/O completion, the device can notify the
+CPU through an interrupt.
+This allows CPU and device operations to overlap.
+
+DEVICE MANAGEMENT SIMULATION COMPLETED SUCCESSFULLY.

@@ -1,0 +1,68 @@
+=======================================================
+       DISK SCHEDULING AND SWAP-SPACE
+=======================================================
+Enter total number of disk tracks: Enter initial head position: Enter number of disk requests: Enter disk request sequence: Enter direction (left/right): 
+Disk Size: 200
+Initial Head Position: 53
+Disk Requests: [98, 183, 37, 122, 14, 124, 65, 67]
+
+========== FCFS DISK SCHEDULING ==========
+Head Movement Sequence: [53, 98, 183, 37, 122, 14, 124, 65, 67]
+Total Head Movement: 640
+
+========== SSTF DISK SCHEDULING ==========
+Head Movement Sequence: [53, 65, 67, 37, 14, 98, 122, 124, 183]
+Total Head Movement: 236
+
+========== SCAN DISK SCHEDULING ==========
+Direction: RIGHT
+Head Movement Sequence: [53, 65, 67, 98, 122, 124, 183, 199, 37, 14]
+Total Head Movement: 331
+
+========== C-SCAN DISK SCHEDULING ==========
+Direction: RIGHT
+Head Movement Sequence: [53, 65, 67, 98, 122, 124, 183, 199, 0, 14, 37]
+Total Head Movement: 382
+
+========== SWAP-SPACE MANAGEMENT ==========
+Enter total swap-space size (MB): 
+1. Allocate Swap Space
+2. Release Swap Space
+3. Display Swap-Space Status
+4. Exit Swap-Space Management
+Enter your choice: Enter process size (MB): Swap space allocated successfully.
+
+1. Allocate Swap Space
+2. Release Swap Space
+3. Display Swap-Space Status
+4. Exit Swap-Space Management
+Enter your choice: Enter process size (MB): ERROR: Insufficient swap space!
+
+1. Allocate Swap Space
+2. Release Swap Space
+3. Display Swap-Space Status
+4. Exit Swap-Space Management
+Enter your choice: Total Swap Space: 100 MB
+Used Swap Space: 40 MB
+Available Swap Space: 60 MB
+
+1. Allocate Swap Space
+2. Release Swap Space
+3. Display Swap-Space Status
+4. Exit Swap-Space Management
+Enter your choice: Enter space to release (MB): Swap space released successfully.
+
+1. Allocate Swap Space
+2. Release Swap Space
+3. Display Swap-Space Status
+4. Exit Swap-Space Management
+Enter your choice: Total Swap Space: 100 MB
+Used Swap Space: 20 MB
+Available Swap Space: 80 MB
+
+1. Allocate Swap Space
+2. Release Swap Space
+3. Display Swap-Space Status
+4. Exit Swap-Space Management
+Enter your choice: 
+DISK SCHEDULING SIMULATION COMPLETED SUCCESSFULLY.

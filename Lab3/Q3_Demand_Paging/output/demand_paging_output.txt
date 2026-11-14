@@ -1,0 +1,73 @@
+=======================================================
+       DEMAND PAGING AND PAGE REPLACEMENT
+=======================================================
+Enter number of frames: Enter number of page references: Enter page reference string: 
+Page Reference String: [7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3]
+Frame Capacity: 3
+
+========== FIFO PAGE REPLACEMENT ==========
+Page: 7 | Frames: [7] | PAGE FAULT
+Page: 0 | Frames: [7, 0] | PAGE FAULT
+Page: 1 | Frames: [7, 0, 1] | PAGE FAULT
+Page: 2 | Frames: [2, 0, 1] | PAGE FAULT
+Page: 0 | Frames: [2, 0, 1] | HIT
+Page: 3 | Frames: [2, 3, 1] | PAGE FAULT
+Page: 0 | Frames: [2, 3, 0] | PAGE FAULT
+Page: 4 | Frames: [4, 3, 0] | PAGE FAULT
+Page: 2 | Frames: [4, 2, 0] | PAGE FAULT
+Page: 3 | Frames: [4, 2, 3] | PAGE FAULT
+Page: 0 | Frames: [0, 2, 3] | PAGE FAULT
+Page: 3 | Frames: [0, 2, 3] | HIT
+
+========== LRU PAGE REPLACEMENT ==========
+Page: 7 | Frames: [7] | PAGE FAULT
+Page: 0 | Frames: [7, 0] | PAGE FAULT
+Page: 1 | Frames: [7, 0, 1] | PAGE FAULT
+Page: 2 | Frames: [0, 1, 2] | PAGE FAULT
+Page: 0 | Frames: [0, 1, 2] | HIT
+Page: 3 | Frames: [0, 2, 3] | PAGE FAULT
+Page: 0 | Frames: [0, 2, 3] | HIT
+Page: 4 | Frames: [0, 3, 4] | PAGE FAULT
+Page: 2 | Frames: [0, 4, 2] | PAGE FAULT
+Page: 3 | Frames: [4, 2, 3] | PAGE FAULT
+Page: 0 | Frames: [2, 3, 0] | PAGE FAULT
+Page: 3 | Frames: [2, 3, 0] | HIT
+
+========== OPTIMAL PAGE REPLACEMENT ==========
+Page: 7 | Frames: [7] | PAGE FAULT
+Page: 0 | Frames: [7, 0] | PAGE FAULT
+Page: 1 | Frames: [7, 0, 1] | PAGE FAULT
+Page: 2 | Frames: [2, 0, 1] | PAGE FAULT
+Page: 0 | Frames: [2, 0, 1] | HIT
+Page: 3 | Frames: [2, 0, 3] | PAGE FAULT
+Page: 0 | Frames: [2, 0, 3] | HIT
+Page: 4 | Frames: [2, 4, 3] | PAGE FAULT
+Page: 2 | Frames: [2, 4, 3] | HIT
+Page: 3 | Frames: [2, 4, 3] | HIT
+Page: 0 | Frames: [0, 4, 3] | PAGE FAULT
+Page: 3 | Frames: [0, 4, 3] | HIT
+
+========== FINAL COMPARISON ==========
+
+----- FIFO RESULTS -----
+Total Page References: 12
+Page Hits: 2
+Page Faults: 10
+Hit Ratio: 0.17
+Fault Ratio: 0.83
+
+----- LRU RESULTS -----
+Total Page References: 12
+Page Hits: 3
+Page Faults: 9
+Hit Ratio: 0.25
+Fault Ratio: 0.75
+
+----- OPTIMAL RESULTS -----
+Total Page References: 12
+Page Hits: 5
+Page Faults: 7
+Hit Ratio: 0.42
+Fault Ratio: 0.58
+
+DEMAND PAGING SIMULATION COMPLETED SUCCESSFULLY.
