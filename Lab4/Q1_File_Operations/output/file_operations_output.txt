@@ -1,0 +1,55 @@
+=======================================================
+       FILE OPERATIONS AND SEQUENTIAL ACCESS
+=======================================================
+
+Test directory created: test_directory
+
+1. Creating and opening file for writing
+Records written successfully.
+
+2. Closing and reopening the file
+
+3. Reading records sequentially
+Record 1: 101,Vikash,CSE
+Record 2: 102,Ankush,CSE
+Record 3: 103,Rahul,AIML
+
+4. Appending a new record
+New record appended successfully.
+
+5. Reading updated file
+Record 1: 101,Vikash,CSE
+Record 2: 102,Ankush,CSE
+Record 3: 103,Rahul,AIML
+Record 4: 104,Aman,CSE
+
+6. Renaming the file
+File renamed successfully.
+
+7. Listing directory contents
+Files: ['final_records.txt']
+
+========== FILE METADATA ==========
+File Name: final_records.txt
+File Size: 58 bytes
+Permissions: -rw-r--r--
+Created: 2026-11-23 19:52:35.611587
+Last Modified: 2026-11-23 19:52:35.611454
+Last Accessed: 2026-11-23 19:52:35.611470
+
+8. Preserving required evidence
+Evidence preserved at: output/preserved_records.txt
+
+9. Deleting the test file
+Test file deleted successfully.
+
+10. Verifying deletion
+Verification successful: Test file no longer exists.
+
+11. Testing error handling
+Handled Error: File does not exist.
+Handled Error: Cannot delete a missing file.
+
+Remaining directory contents: []
+
+FILE OPERATIONS SIMULATION COMPLETED SUCCESSFULLY.

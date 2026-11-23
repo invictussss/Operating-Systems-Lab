@@ -1,0 +1,27 @@
+=======================================================
+       FILE ALLOCATION METHODS SIMULATION
+=======================================================
+Enter total number of disk blocks: Enter number of blocks required by file: 
+--- CONTIGUOUS ALLOCATION ---
+File allocated successfully.
+Starting Block: 0
+Allocated Blocks: [0, 1, 2, 3]
+Disk Status: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+
+--- LINKED ALLOCATION ---
+File allocated successfully.
+Allocated Blocks: [0, 1, 2, 3]
+Linked List:
+0 -> 1 -> 2 -> 3 -> NULL
+Disk Status: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+
+--- INDEXED ALLOCATION ---
+File allocated successfully.
+Index Block: 0
+Data Blocks: [1, 2, 3, 4]
+Index Block Contents: [1, 2, 3, 4]
+Disk Status: [1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
+
+=======================================================
+       SIMULATION COMPLETED SUCCESSFULLY
+=======================================================

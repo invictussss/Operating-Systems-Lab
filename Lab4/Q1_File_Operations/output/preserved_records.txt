@@ -1,0 +1,4 @@
+101,Vikash,CSE
+102,Ankush,CSE
+103,Rahul,AIML
+104,Aman,CSE

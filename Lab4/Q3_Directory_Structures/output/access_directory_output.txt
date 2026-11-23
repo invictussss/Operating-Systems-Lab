@@ -1,0 +1,74 @@
+============================================================
+   FILE ACCESS AND DIRECTORY STRUCTURES SIMULATION
+============================================================
+
+--- DIRECT ACCESS ---
+Available Records:
+Block 0: 101,Vikash,AIML
+Block 1: 102,Viraj,CSE
+Block 2: 103,Chirag,AIML
+Block 3: 104,Mayank,CSE
+Block 4: 105,Akshita,AIML
+
+Enter block number to access (0-4): Record Found: 103,Chirag,AIML
+
+--- INDEXED ACCESS ---
+Index Table:
+Index 1 -> Disk Block 10
+Index 2 -> Disk Block 20
+Index 3 -> Disk Block 30
+Index 4 -> Disk Block 40
+Index 5 -> Disk Block 50
+
+Enter index to access (1-5): Disk Block: 30
+Record Found: 103,Chirag,AIML
+
+--- DIRECTORY STRUCTURES ---
+
+1. Single-Level Directory:
+Root/
+  Vikash.txt
+  Viraj.txt
+  Chirag.txt
+  Mayank.txt
+  Akshita.txt
+
+2. Two-Level Directory:
+Vikash/
+  notes.txt
+  program.py
+Viraj/
+  report.pdf
+  data.csv
+Chirag/
+  main.py
+  project.txt
+Mayank/
+  assignment.docx
+  output.txt
+Akshita/
+  records.txt
+  image.png
+
+3. Tree-Structured Directory:
+Root/
+  Students/
+    Vikash/
+      notes.txt
+      program.py
+    Viraj/
+      report.pdf
+    Chirag/
+      project.txt
+    Mayank/
+      assignment.docx
+    Akshita/
+      records.txt
+  Common/
+    Shared/
+      timetable.pdf
+      notice.txt
+
+============================================================
+   SIMULATION COMPLETED SUCCESSFULLY
+============================================================

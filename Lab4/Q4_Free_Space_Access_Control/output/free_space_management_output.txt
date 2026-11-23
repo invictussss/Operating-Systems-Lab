@@ -1,0 +1,60 @@
+============================================================
+   FREE-SPACE MANAGEMENT AND ACCESS CONTROL
+============================================================
+Enter total disk blocks: 
+--- FILE ALLOCATION ---
+File 'Vikash.txt' created successfully.
+Allocated Blocks: [0, 1]
+File 'Viraj.txt' created successfully.
+Allocated Blocks: [2, 3]
+File 'Chirag.txt' created successfully.
+Allocated Blocks: [4, 5]
+File 'Mayank.txt' created successfully.
+Allocated Blocks: [6]
+File 'Akshita.txt' created successfully.
+Allocated Blocks: [7]
+
+--- FREE-SPACE MANAGEMENT (BITMAP) ---
+Bitmap: [1, 1, 1, 1, 1, 1, 1, 1, 0, 0]
+Free Blocks: [8, 9]
+Total Free Blocks: 2
+
+--- ACCESS CONTROL ---
+File: Vikash.txt
+Read Permission: True
+Write Permission: True
+Execute Permission: False
+
+Checking read permission for Vikash.txt
+Access Granted.
+
+Checking execute permission for Vikash.txt
+Access Denied.
+
+--- MODIFYING PERMISSIONS ---
+Permissions updated successfully.
+
+--- ACCESS CONTROL ---
+File: Vikash.txt
+Read Permission: True
+Write Permission: False
+Execute Permission: True
+
+Checking write permission for Vikash.txt
+Access Denied.
+
+Checking execute permission for Vikash.txt
+Access Granted.
+
+--- FILE DELETION ---
+File 'Chirag.txt' deleted successfully.
+Released Blocks: [4, 5]
+
+--- FREE-SPACE MANAGEMENT (BITMAP) ---
+Bitmap: [1, 1, 1, 1, 0, 0, 1, 1, 0, 0]
+Free Blocks: [4, 5, 8, 9]
+Total Free Blocks: 4
+
+============================================================
+   SIMULATION COMPLETED SUCCESSFULLY
+============================================================
